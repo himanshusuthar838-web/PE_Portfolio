@@ -1,0 +1,256 @@
+/* ---------------------------------------------------
+   Himanshu Suthar — Portfolio
+   Palette: ink navy, warm paper, deep teal accent
+--------------------------------------------------- */
+
+:root {
+  --ink: #16223b;
+  --paper: #faf8f4;
+  --paper-raised: #ffffff;
+  --accent: #1f7a6c;
+  --accent-dark: #145349;
+  --accent-tint: #e4efec;
+  --line: #ddd6c7;
+  --text-body: #2b3245;
+  --text-muted: #5b6377;
+
+  --font-display: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --max-width: 760px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--paper);
+  color: var(--text-body);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* -------------------- Header -------------------- */
+
+.site-header {
+  background-color: var(--ink);
+  color: var(--paper);
+  padding: 64px 0 52px;
+  border-bottom: 4px solid var(--accent);
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.kicker {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: var(--accent-tint);
+  opacity: 0.85;
+}
+
+h1 {
+  margin: 4px 0 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.1rem, 5vw, 2.9rem);
+  line-height: 1.1;
+  color: var(--paper);
+}
+
+.tagline {
+  margin: 10px 0 0;
+  font-size: 1.05rem;
+  color: #cfd6e2;
+  font-weight: 400;
+}
+
+/* -------------------- Sections -------------------- */
+
+.section {
+  padding: 52px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.section:last-of-type {
+  border-bottom: none;
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--ink);
+  margin: 0 0 20px;
+  position: relative;
+  padding-left: 18px;
+  border-left: 4px solid var(--accent);
+}
+
+#about p {
+  max-width: 62ch;
+  color: var(--text-body);
+  font-size: 1.05rem;
+}
+
+/* -------------------- Skills -------------------- */
+
+.skills-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 9px 16px;
+  background-color: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease, color 0.2s ease;
+}
+
+.skill-tag:hover {
+  background-color: var(--accent);
+  border-color: var(--accent-dark);
+  color: var(--paper);
+  transform: translateY(-2px);
+}
+
+/* -------------------- Projects -------------------- */
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.project-card {
+  background-color: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  padding: 26px 28px;
+  transition: border-left-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.project-card:hover {
+  border-left-color: var(--accent-dark);
+  box-shadow: 0 6px 18px rgba(22, 34, 59, 0.09);
+  transform: translateY(-3px);
+}
+
+.project-card h3 {
+  margin: 0 0 10px;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--ink);
+}
+
+.project-card p {
+  margin: 0 0 16px;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  max-width: 65ch;
+}
+
+.project-tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-tags li {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+  background-color: var(--accent-tint);
+  padding: 5px 11px;
+  border-radius: 2px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.project-tags li:hover {
+  background-color: var(--accent);
+  color: var(--paper);
+}
+
+/* -------------------- Footer -------------------- */
+
+.site-footer {
+  padding: 32px 0 48px;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* -------------------- Responsive: ~375px -------------------- */
+
+@media (max-width: 480px) {
+  .wrap {
+    padding: 0 20px;
+  }
+
+  .site-header {
+    padding: 48px 0 40px;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  .tagline {
+    font-size: 0.95rem;
+  }
+
+  .section {
+    padding: 38px 0;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  .skills-list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skill-tag {
+    width: 100%;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+}
